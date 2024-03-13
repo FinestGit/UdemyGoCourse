@@ -53,7 +53,7 @@ func main() {
 }
 
 func writeDataToFile(earningsBeforeTax float64, earningsAfterTax float64, ratio float64) {
-	var commaSeperatedValues = fmt.Sprintf("%.2f,%.2f,%.2f", earningsBeforeTax, earningsAfterTax, ratio)
+	var commaSeperatedValues = fmt.Sprintf("Earnings Before Tax, Earnings After Tax, Ratio\n%.2f,%.2f,%.2f", earningsBeforeTax, earningsAfterTax, ratio)
 	os.WriteFile("profitAndRatio.csv", []byte(commaSeperatedValues), 0644)
 }
 
