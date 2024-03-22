@@ -13,7 +13,13 @@ func main() {
 
 	var appUser *user.User
 
-	appUser, err := user.NewUser(firstName, lastName, birthDate)
+	admin := user.NewAdmin("test@example.com", "tset123")
+
+	admin.OutputUserDetails()
+	admin.ClearUserName()
+	admin.OutputUserDetails()
+
+	appUser, err := user.New(firstName, lastName, birthDate)
 
 	if err != nil {
 		fmt.Println(err)
